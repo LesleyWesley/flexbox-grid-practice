@@ -43,7 +43,7 @@ hr {
     height: 1px;
     border: 0;
     border-top: 1px solid #ccc;
-    margin: 1em 0;
+    margin 1em 0;
     padding: 0;
 }
 
@@ -66,19 +66,19 @@ video {
  * Remove default fieldset styles.
  */
 
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
+ fieldset {
+     border: 0;
+     margin: 0;
+     padding: 0;
+ }
 
 /*
  * Allow only vertical resizing of textareas.
  */
 
-textarea {
-    resize: vertical;
-}
+ textarea {
+     resize: vertical;
+ }
 
 /* ==========================================================================
    Browser Upgrade Prompt
@@ -99,13 +99,50 @@ textarea {
 html {
   background: linear-gradient(90deg, #FFCCFF, #CCFFFF);
   height: 100%;
+  width: 100%;
 }
 
 body {
-  font-family: 'Roboto Slab', serif;
-  padding: 2em;
+  font-family: 'Source Sans Pro', sans-serif;
+  padding: 0 2em;
   font-size: 1.25em;
   height: 100%;
+  color: #FFF;
+}
+
+header,
+footer {
+  background-color: #222;
+  height: 80px;
+  width: 100%;
+}
+
+main {
+  background-color: #ccc;
+  height: 250px;
+  width: 100%;
+  line-height: 1.5em;
+  font-size: 1em;
+  text-align: center;
+}
+
+header,
+footer,
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #302B32;
+  padding: .5em;
+  border-radius: 20px;
+}
+
+header {
+  margin-bottom: 2px;
+}
+
+header h1 {
+  font-size: 2em;
 }
 
 .wrapper {
@@ -113,22 +150,25 @@ body {
   font-weight: 700;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-flow: row wrap;
 }
 
 .div-1, .div-2, .div-3 {
   /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
   color: #FFF;
-  line-height: 1.75em;
+  line-height: 1.5em;
   font-size: 1em;
+  background-color: rgba( 0, 0, 0, 0.8);
+  border-radius: 20px;
+  padding: .5em;
+  margin: .5em;
   height: auto;
+  text-align: center;
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  padding: 1em;
-  margin: 5px 0 5px 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 20px;
 }
 
 
@@ -221,12 +261,37 @@ body {
     /* Style adjustments for high resolution devices */
 }
 
+@media (max-width: 768px) {
+  main {
+    font-size: 1.25em;
+    height: auto;
+  }
+}
+
 @media (min-width: 1200px) {
      .div-1, .div-2, .div-3 {
        width: 30%;
-       margin: 0px;
+       margin: 30px 0 30px 0;
+       height: 250px;
      }
-}
+
+     header h1 {
+       font-size: 3em;
+     }
+
+     main {
+      padding: 0 .5em 0 .5em;
+      font-size: 1.5em;
+      line-height: 1.75em;
+     }
+
+     footer {
+       height: 100px;
+     }
+  }
+
+
+
 
 /* ==========================================================================
    Print styles.
